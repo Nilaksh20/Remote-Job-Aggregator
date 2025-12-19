@@ -16,7 +16,7 @@ A production-grade Flask-based job aggregation system that fetches and normalize
 1. **Remotive** - Remote tech jobs (No API key required)
 
 
-## 🚀uick Start
+## Quick Start
 
 ### Prerequisites
 
