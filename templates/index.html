@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbitlane · API‑Powered Tech Jobs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page">
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="brand">
+                    <div class="brand-mark"></div>
+                    <div class="brand-copy">
+                        <h1>Orbitlane</h1>
+                        <p>API‑native job discovery for software, data, and AI roles — always redirecting to the official posting.</p>
+                    </div>
+                </div>
+                <div class="header-meta">
+                    <span class="pill">Live job APIs · No applications collected</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="jobs-shell">
+                <div class="jobs-header">
+                    <div>
+                        <h2>Latest roles</h2>
+                        <p class="jobs-subcopy">Curated engineering, data, and AI listings pulled directly from public job APIs.</p>
+                    </div>
+                    <div class="legend">
+                        <span class="legend-dot legend-se"></span><span>Software</span>
+                        <span class="legend-dot legend-data"></span><span>Data</span>
+                        <span class="legend-dot legend-ai"></span><span>AI / ML</span>
+                        <span class="legend-dot legend-intern"></span><span>Internships</span>
+                    </div>
+                </div>
+
+                {% if jobs %}
+                <div class="jobs-grid">
+                    {% for job in jobs %}
+                    <article class="job-card">
+                        <div class="job-main">
+                            <h3 class="job-title">{{ job.title }}</h3>
+                            <p class="job-company">{{ job.company }}</p>
+                        </div>
+
+                        <div class="job-meta">
+                            <span class="job-location">
+                                {{ job.location or "Remote" }}
+                            </span>
+                            <span class="job-tag job-tag-{{ job.category_slug }}">
+                                {{ job.category }}
+                            </span>
+                        </div>
+
+                        <div class="job-cta">
+                            <a href="{{ job.url }}" class="apply-link" target="_blank" rel="noopener noreferrer">
+                                <span>Apply on original site</span>
+                                <span class="arrow">↗</span>
+                            </a>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="empty-state">
+                    <h3>No roles from providers yet</h3>
+                    <p>We couldn’t fetch jobs from the configured APIs just now. Try refreshing in a moment.</p>
+                </div>
+                {% endif %}
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Orbitlane surfaces read‑only job data from public APIs and always sends you to the official job page to apply.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
