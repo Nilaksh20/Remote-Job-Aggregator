@@ -1,8 +1,8 @@
-# Job API Aggregator 🚀
+# Remote Job Aggregator 
 
 A production-grade Flask-based job aggregation system that fetches and normalizes jobs from multiple public job APIs into one unified stream.
 
-## ✨ Features
+##  Features
 
 - **Multi-API Integration**: Aggregates jobs from 6+ public job APIs
 - **Unified Format**: Normalizes heterogeneous API responses into a standard format
@@ -14,13 +14,9 @@ A production-grade Flask-based job aggregation system that fetches and normalize
 ## 🔌 Integrated APIs
 
 1. **Remotive** - Remote tech jobs (No API key required)
-2. **Adzuna** - Global job listings (Free API key)
-3. **JSearch** - Multi-source aggregator via RapidAPI
-4. **Careerjet** - Global job search engine
-5. **The Muse** - Startup and tech-focused companies
-6. **USAJobs** - US government positions
 
-## 🚀 Quick Start
+
+## 🚀uick Start
 
 ### Prerequisites
 
@@ -110,25 +106,6 @@ job-api-aggregator/
 - **Status**: ✅ Works immediately (no setup needed)
 - **Docs**: https://remotive.com/api-documentation
 
-### Adzuna
-- **Get API Key**: https://developer.adzuna.com/overview
-- **Free tier**: Available
-
-### JSearch (RapidAPI)
-- **Get API Key**: https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch/
-- **Free tier**: Available
-
-### Careerjet
-- **Get Affiliate ID**: https://www.careerjet.com/partners/api/
-- **Free**: Yes
-
-### The Muse
-- **Get API Key**: https://www.themuse.com/developers/api/v2
-- **Free tier**: Limited access
-
-### USAJobs
-- **Get API Key**: https://developer.usajobs.gov/
-- **Free**: Yes (email required)
 
 ## 🎯 Usage
 
@@ -147,24 +124,10 @@ The application automatically:
 - **python-dotenv** - Environment variable management
 - **Python 3.7+** - Programming language
 
-## 📝 License
 
-This project is open source and available for personal and commercial use.
 
-## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
-- Add more job APIs
-- Improve categorization logic
-- Enhance error handling
-- Add new features
 
-## 📧 Contact
 
-For questions or suggestions, please open an issue on GitHub.
-
----
-
-**Built with ❤️ for job seekers everywhere**
 
 
